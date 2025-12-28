@@ -1,0 +1,17 @@
+# --- Core API & Server ---
+fastapi>=0.95.0
+uvicorn[standard]>=0.22.0
+python-multipart          # Required for processing File Uploads in FastAPI
+streamlit>=1.22.0          # For building interactive web apps
+
+# --- Machine Learning & Data Processing ---
+tensorflow>=2.10.0        # Includes Keras
+numpy>=1.21.0
+pillow                    # Required for image loading/preprocessing
+
+# --- Optional: For Plotting & Evaluation (If running notebooks or analysis) ---
+scikit-learn            # For confusion_matrix and classification_report
+matplotlib              # For plotting graphs
+seaborn                 # For heatmaps
+pandas                  # For data manipulation
+
