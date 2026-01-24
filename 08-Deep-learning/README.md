@@ -1,6 +1,6 @@
 # 👗🧢 Fashion Image Classification with Xception
 
-🚀 **Live Demo:** https://fashion-classifier-1.streamlit.app/
+🚀 **Live Demo:** https://fashion-classifier-2.streamlit.app/
 
 A deep learning–based fashion image classifier built using **TensorFlow / Keras** and deployed using **Streamlit**.  
 The model classifies clothing images into **10 fashion categories** with ~**90% test accuracy**.
