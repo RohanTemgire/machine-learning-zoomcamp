@@ -20,10 +20,14 @@ st.title("👗🧢 A Simple Fashion Classifier")
 
 tab_info, tab_predict= st.tabs(["Info","🔍 Predict"])
 
-
+MODEL_URL = 'https://github.com/RohanTemgire/machine-learning-zoomcamp/blob/main/08-Deep-learning/xception_v4_1_03_0.859.h5'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "xception_v4_1_03_0.859.h5")
+MODEL_PATH = "xception_v4_1_03_0.859.h5"
 IMG_SIZE = (299, 299)
+
+if not os.path.exists(MODEL_PATH):
+    with open(MODEL_PATH, "wb") as f:
+        f.write(requests.get(MODEL_URL).content)
 
 st.write("Current dir:", os.getcwd())
 st.write("Files:", os.listdir(BASE_DIR))
