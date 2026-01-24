@@ -20,8 +20,13 @@ st.title("👗🧢 A Simple Fashion Classifier")
 tab_info, tab_predict= st.tabs(["Info","🔍 Predict"])
 
 
-MODEL_PATH = 'xception_v4_1_03_0.859.h5'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "xception_v4_1_03_0.859.h5")
 IMG_SIZE = (299, 299)
+
+st.write("Current dir:", os.getcwd())
+st.write("Files:", os.listdir(BASE_DIR))
+
 
 classes = [
     'dress',
@@ -38,7 +43,7 @@ classes = [
 
 @st.cache_resource
 def load_xception_model():
-    return load_model("xception_v4_1_03_0.859.h5")
+    return load_model(MODEL_PATH)
 
 model = load_xception_model()
 
