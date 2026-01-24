@@ -29,9 +29,6 @@ if not os.path.exists(MODEL_PATH):
     with open(MODEL_PATH, "wb") as f:
         f.write(requests.get(MODEL_URL).content)
 
-st.write("Current dir:", os.getcwd())
-st.write("Files:", os.listdir(BASE_DIR))
-
 
 classes = [
     'dress',
